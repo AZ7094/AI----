@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI助教答疑平台注册页面">
+  <title>注册 | AI助教答疑平台</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="auth-shell register-shell">
+    <section class="intro" aria-labelledby="register-site-title">
+      <a class="brand" href="index.html" aria-label="AI助教答疑平台首页">✦ AI Tutor</a>
+      <div>
+        <p class="eyebrow">LEARN WITH CONFIDENCE</p>
+        <h1 id="register-site-title">从一次提问开始</h1>
+        <p class="intro-copy">创建账号后，选择你的学习方向，让 AI 助教给出更贴合你的解答。</p>
+      </div>
+      <ul class="feature-list">
+        <li><span>✓</span> 分步骤解释难点</li>
+        <li><span>✓</span> 保存最近的学习问题</li>
+        <li><span>✓</span> 支持多个学科方向</li>
+      </ul>
+    </section>
+
+    <section class="auth-card register-card" aria-labelledby="register-title">
+      <div class="card-heading">
+        <p class="eyebrow">CREATE ACCOUNT</p>
+        <h2 id="register-title">创建学习账号</h2>
+        <p>带 <b>*</b> 的项目为必填内容。</p>
+      </div>
+      <form id="registerForm" novalidate>
+        <div class="two-columns">
+          <div class="field">
+            <label for="name">姓名 <b>*</b></label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="请输入姓名" required minlength="2" maxlength="20">
+          </div>
+          <div class="field">
+            <label for="grade">学习阶段 <b>*</b></label>
+            <select id="grade" name="grade" required>
+              <option value="" selected disabled>请选择</option>
+              <option>初中</option><option>高中</option><option>大学</option><option>其他</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">邮箱 <b>*</b></label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email"
+                 placeholder="student@example.com" required>
+          <small>用于登录和接收学习提醒。</small>
+        </div>
+        <div class="field">
+          <label for="phone">手机号</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" pattern="^1[3-9]\d{9}$"
+                 placeholder="11位中国大陆手机号">
+          <small>选填；填写后也可用手机号登录。</small>
+        </div>
+        <div class="field">
+          <label for="subject">常用学科</label>
+          <input id="subject" name="subject" type="text" list="subjects" placeholder="例如：高等数学">
+          <datalist id="subjects"><option value="数学"><option value="英语"><option value="计算机"><option value="物理"><option value="高等数学"></datalist>
+        </div>
+        <div class="field">
+          <label for="registerPassword">设置密码 <b>*</b></label>
+          <div class="password-wrap">
+            <input id="registerPassword" name="password" type="password" autocomplete="new-password" required minlength="8"
+                   pattern="(?=.*[A-Za-z])(?=.*\d).{8,}" placeholder="至少8位，含字母和数字" aria-describedby="passwordHint passwordStrength">
+            <button class="text-button toggle-password" type="button" aria-label="显示密码">显示</button>
+          </div>
+          <small id="passwordHint">建议使用字母、数字和符号组合。</small>
+          <p id="passwordStrength" class="strength" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="confirmPassword">确认密码 <b>*</b></label>
+          <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required placeholder="再次输入密码">
+        </div>
+        <label class="agreement"><input id="agreement" name="agreement" type="checkbox" required> 我已阅读并同意<a href="#terms">《服务协议》</a>与<a href="#privacy">《隐私说明》</a></label>
+        <p id="registerMessage" class="form-message" role="alert" aria-live="polite"></p>
+        <button class="primary-button" type="submit">创建账号 <span>→</span></button>
+      </form>
+      <p class="switch-auth">已经有账号？<a href="index.html">去登录</a></p>
+      <p id="terms" class="help-note">这是课程作业演示页面，不收集真实个人信息。</p>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

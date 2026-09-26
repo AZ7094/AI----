@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>答疑 | AI助教答疑平台</title><link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="app-body">
+  <header class="app-header"><a class="brand" href="assistant.html">✦ AI Tutor</a><nav><a href="register.html">账户设置</a><button id="logout" class="text-button" type="button">退出登录</button></nav></header>
+  <main class="qa-layout">
+    <section class="qa-hero"><p class="eyebrow">AI STUDY PARTNER</p><h1>你好，<span id="studentName">同学</span>！</h1><p>把遇到的问题交给我，我们一起把它讲清楚。</p></section>
+    <section class="qa-card" aria-label="AI答疑">
+      <div id="chat" class="chat" aria-live="polite"><article class="assistant-bubble">你好！你可以问我数学、英语、计算机等学习问题。我会尽量用步骤化的方式回答。</article></div>
+      <form id="questionForm" class="question-form"><label class="sr-only" for="question">你的问题</label><textarea id="question" required maxlength="300" placeholder="例如：请用简单的话解释什么是递归？"></textarea><button class="primary-button" type="submit">提问 <span>→</span></button></form>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>
