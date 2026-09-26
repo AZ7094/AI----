@@ -25,18 +25,3 @@
 | 候选输入 | `datalist` | 为常用学科提供可选建议，也允许用户自行输入。 |
 | 可访问性 | `label`、`aria-live`、`aria-describedby` | 让标签、错误提示和密码强度能够被辅助技术识别。 |
 | 交互增强 | 密码强度提示、显示/隐藏密码、两次密码一致性检查 | 在浏览器原生校验之外提供更及时、明确的反馈。 |
-
-## GitHub 提交步骤
-
-在 IDEA 底部的 Terminal 中执行以下命令。先在 GitHub 网站创建一个空仓库，复制其 HTTPS 地址后替换 `<你的仓库地址>`：
-
-```bash
-git init
-git add .
-git commit -m "feat: 完成 AI 助教答疑平台注册和登录页面"
-git branch -M main
-git remote add origin <你的仓库地址>
-git push -u origin main
-```
-
-也可以在 IDEA 中依次使用 **Git → Create Git Repository**、提交（Commit）和 **Git → Push** 图形化完成。提交后，将 GitHub 仓库链接填写到学习通即可。
